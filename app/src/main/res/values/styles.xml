@@ -19,5 +19,10 @@
 
     <style name="AppTheme" parent="BaseAppTheme" />
 
+    <style name="ErrorText" parent="TextAppearance.AppCompat.Small">
+        <item name="android:textStyle">bold|italic</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+
 
 </resources>
