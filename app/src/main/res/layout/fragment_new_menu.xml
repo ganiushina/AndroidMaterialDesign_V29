@@ -117,4 +117,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonRipple" />
 
+    <Button
+        android:id="@+id/buttonTint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="163dp"
+        android:layout_marginEnd="37dp"
+        android:text="@string/buttonTint"
+        android:backgroundTint="@color/accent"
+        app:layout_constraintEnd_toStartOf="@+id/buttonFlat"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

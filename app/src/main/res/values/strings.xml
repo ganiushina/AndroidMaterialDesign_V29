@@ -24,4 +24,5 @@
     <string name="flat_button">Flat button</string>
     <string name="button_ripple">Button  with Ripple</string>
     <string name="noActionBar">NoActionBar</string>
+    <string name="buttonTint">Button</string>
 </resources>
