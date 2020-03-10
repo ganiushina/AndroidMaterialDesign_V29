@@ -16,4 +16,12 @@
     <string name="new_menu">Новое меню</string>
     <string name="enter_name">Введите имя</string>
     <string name="logon">Login</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="bottom_sheet_peek">bottom_sheet_peek</string>
+    <string name="bottom_sheet_content">bottom_sheet_content</string>
+    <string name="flat_button">Flat button</string>
+    <string name="button_ripple">Button  with Ripple</string>
+    <string name="noActionBar">NoActionBar</string>
 </resources>
