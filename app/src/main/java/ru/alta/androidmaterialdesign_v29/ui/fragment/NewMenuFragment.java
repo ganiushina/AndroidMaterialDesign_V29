@@ -30,14 +30,31 @@ public class NewMenuFragment extends Fragment {
 
 
     public View onCreateView(@NonNull LayoutInflater inflater,
-                             ViewGroup container, Bundle savedInstanceState) {
+                             ViewGroup container, final Bundle savedInstanceState) {
         newMenuViewModel =
                 ViewModelProviders.of(this).get(NewMenuViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_new_menu, container, false);
+        final View root = inflater.inflate(R.layout.fragment_new_menu, container, false);
         final TextView textView = root.findViewById(R.id.text_new);
         final TextInputEditText textLoginName = root.findViewById(R.id.textInputEditText);
         Button buttonLogin = root.findViewById(R.id.buttonLogin);
         Button buttonNoActionBar = root.findViewById(R.id.buttonNoActionBar);
+        Button buttonOpen = root.findViewById(R.id.buttonOpen);
+
+
+        buttonOpen.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (savedInstanceState == null) {
+ //                   Navigation.findNavController(v).navigate(R.id.nav_host_fragment);
+//                    fTrans.replace(R.id.fragment_container_view_tag, frag1);
+////                    getActivity().getSupportFragmentManager().beginTransaction()
+////                            .replace(R.id., new Fragment_progress_bar())
+////                            .commit();
+                }
+            }
+        });
+
+     //   buttonOpen.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.fr));
 
         BottomSheetFragment bottomSheetDialogFragment = new BottomSheetFragment();
         bottomSheetDialogFragment.show(getActivity().getSupportFragmentManager(), "Bottom Sheet Dialog Fragment");
@@ -94,7 +111,6 @@ public class NewMenuFragment extends Fragment {
             }
         }
         );
-
 
         return root;
 
