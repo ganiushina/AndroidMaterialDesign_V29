@@ -121,4 +121,6 @@
     <string name="buttonTint">Button</string>
     <string name="hide_progress_bar">Button</string>
     <string name="buttonOpen">Open New Fragment</string>
+    <string name="ocean">Океан</string>
+    <string name="new_recycler_name">New Recycler View Fragment</string>
 </resources>

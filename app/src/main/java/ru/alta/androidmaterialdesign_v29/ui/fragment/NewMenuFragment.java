@@ -16,12 +16,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
+import androidx.navigation.Navigation;
 
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.textfield.TextInputEditText;
 
 import ru.alta.androidmaterialdesign_v29.BottomSheetFragment;
 import ru.alta.androidmaterialdesign_v29.R;
+import ru.alta.androidmaterialdesign_v29.ui.progressbar.Fragment_progress_bar;
 
 public class NewMenuFragment extends Fragment {
 
@@ -30,7 +32,7 @@ public class NewMenuFragment extends Fragment {
 
 
     public View onCreateView(@NonNull LayoutInflater inflater,
-                             ViewGroup container, final Bundle savedInstanceState) {
+                             final ViewGroup container, final Bundle savedInstanceState) {
         newMenuViewModel =
                 ViewModelProviders.of(this).get(NewMenuViewModel.class);
         final View root = inflater.inflate(R.layout.fragment_new_menu, container, false);
@@ -45,16 +47,15 @@ public class NewMenuFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 if (savedInstanceState == null) {
- //                   Navigation.findNavController(v).navigate(R.id.nav_host_fragment);
-//                    fTrans.replace(R.id.fragment_container_view_tag, frag1);
-////                    getActivity().getSupportFragmentManager().beginTransaction()
-////                            .replace(R.id., new Fragment_progress_bar())
-////                            .commit();
-                }
+                    Fragment_progress_bar nextFrag= new Fragment_progress_bar();
+                    getActivity().getSupportFragmentManager().beginTransaction()
+                            .replace(R.id.nav_host_fragment, nextFrag, "findThisFragment")
+                            .addToBackStack(null)
+                            .commit();                }
             }
         });
 
-     //   buttonOpen.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.fr));
+
 
         BottomSheetFragment bottomSheetDialogFragment = new BottomSheetFragment();
         bottomSheetDialogFragment.show(getActivity().getSupportFragmentManager(), "Bottom Sheet Dialog Fragment");

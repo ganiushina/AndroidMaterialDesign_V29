@@ -33,6 +33,11 @@
             android:id="@+id/nav_collapsing_bar"
             android:icon="@drawable/ic_action_name1"
             android:title="@string/new_collapsing_bar"/>
+
+        <item
+            android:id="@+id/nav_recycler_view"
+            android:icon="@drawable/ocean1"
+            android:title="@string/new_recycler_name"/>
     </group>
 
     <item android:title="Communicate">

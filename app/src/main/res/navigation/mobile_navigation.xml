@@ -48,6 +48,12 @@
         tools:layout="@layout/collapsing_toolbar_fragment" />
 
     <fragment
+        android:id="@+id/nav_recycler_view"
+        android:name="ru.alta.androidmaterialdesign_v29.ui.recyclerView.ItemFragment"
+        android:label="@string/new_menu1"
+        tools:layout="@layout/fragment_item_list" />
+
+    <fragment
         android:id="@+id/nav_share"
         android:name="ru.alta.androidmaterialdesign_v29.ui.share.ShareFragment"
         android:label="@string/menu_share"
