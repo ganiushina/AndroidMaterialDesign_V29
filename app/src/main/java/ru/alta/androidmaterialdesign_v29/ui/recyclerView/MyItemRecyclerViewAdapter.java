@@ -5,6 +5,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import ru.alta.androidmaterialdesign_v29.R;
@@ -23,6 +24,7 @@ public class MyItemRecyclerViewAdapter extends RecyclerView.Adapter<MyItemRecycl
     private final List<DummyItem> mValues;
     private final OnListFragmentInteractionListener mListener;
 
+
     public MyItemRecyclerViewAdapter(List<DummyItem> items, OnListFragmentInteractionListener listener) {
         mValues = items;
         mListener = listener;
@@ -39,6 +41,19 @@ public class MyItemRecyclerViewAdapter extends RecyclerView.Adapter<MyItemRecycl
     public void onBindViewHolder(final ViewHolder holder, int position) {
         holder.mItem = mValues.get(position);
         holder.mIdView.setText(mValues.get(position).id);
+
+        switch (position % 3){
+            case 0:
+                holder.image_view.setImageResource(R.drawable.ocean);
+                break;
+            case 1:
+                holder.image_view.setImageResource(R.drawable.ocean1);
+                break;
+            case 2:
+                holder.image_view.setImageResource(R.drawable.ocean2);
+                break;
+
+        }
 
         holder.mView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -61,12 +76,15 @@ public class MyItemRecyclerViewAdapter extends RecyclerView.Adapter<MyItemRecycl
         public final View mView;
         public final TextView mIdView;
         public DummyItem mItem;
+        ImageView image_view;
 
         public ViewHolder(View view) {
             super(view);
             mView = view;
             mIdView = (TextView) view.findViewById(R.id.item_number);
+            image_view = view.findViewById(R.id.image_view);
         }
+
 
         @Override
         public String toString() {
