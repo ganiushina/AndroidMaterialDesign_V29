@@ -59,6 +59,15 @@
         android:label="@string/new_menu_tabs"
         tools:layout="@layout/fragment_tab" />
 
+    <fragment
+        android:id="@+id/nav_bottom_view"
+        android:name="ru.alta.androidmaterialdesign_v29.ui.bottomNavigationView.FragmentBottomNavigationView"
+        android:label="@string/new_bottom_view_menu"
+        tools:layout="@layout/fragment_bottom_navigation_view" />
+
+
+
+
 
     <fragment
         android:id="@+id/nav_share"

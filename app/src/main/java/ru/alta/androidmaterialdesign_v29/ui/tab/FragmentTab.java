@@ -2,6 +2,7 @@ package ru.alta.androidmaterialdesign_v29.ui.tab;
 
 import android.os.Bundle;
 
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.ViewPager;
 
@@ -9,12 +10,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.tabs.TabLayout;
 
 import ru.alta.androidmaterialdesign_v29.R;
 import ru.alta.androidmaterialdesign_v29.ui.collapsingtoolbar.CollapsingToolbar;
 import ru.alta.androidmaterialdesign_v29.ui.fragment.NewMenuFragment;
 import ru.alta.androidmaterialdesign_v29.ui.recyclerView.ItemFragment;
+import ru.alta.androidmaterialdesign_v29.ui.send.SendFragment;
 
 
 /**
@@ -58,6 +61,7 @@ public class FragmentTab extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+     //   getActivity().setTheme(R.id.);
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
@@ -69,18 +73,52 @@ public class FragmentTab extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_tab, container, false);
+        ((AppCompatActivity) getActivity()).getSupportActionBar().hide();
 
-        NewMenuFragment menuFragment = new NewMenuFragment();
+        SendFragment sendFragment = new SendFragment();
         ItemFragment itemFragment = new ItemFragment();
         CollapsingToolbar collapsingToolbar = new CollapsingToolbar();
 
         TabsAdapter tabsAdapter = new TabsAdapter(getActivity().getSupportFragmentManager());
-        tabsAdapter.addFragment(menuFragment, "tab1");
+        tabsAdapter.addFragment(sendFragment, "tab1");
         tabsAdapter.addFragment(itemFragment, "tab2");
         tabsAdapter.addFragment(collapsingToolbar, "tab3");
 
         ViewPager viewPager = view.findViewById(R.id.view_pager);
         viewPager.setAdapter(tabsAdapter);
+
+        final FloatingActionButton fab = getActivity().findViewById(R.id.fab);
+
+        viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+                switch (position) {
+                    case 0:
+                        fab.hide();
+                        break;
+                    case 1:
+                        fab.show();
+                        break;
+                    case 3:
+                        fab.hide();
+                        break;
+                    default:
+                        fab.hide();
+                        break;
+                }
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+
+            }
+        });
         TabLayout tabs = view.findViewById(R.id.tabs);
         tabs.setupWithViewPager(viewPager);
         return view;
