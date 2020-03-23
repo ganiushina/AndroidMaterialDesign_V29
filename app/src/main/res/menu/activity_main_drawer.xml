@@ -23,8 +23,21 @@
             android:title="@string/menu_tools" />
         <item
             android:id="@+id/nav_new"
-            app:icon="@drawable/ic_action_name"
+            android:icon="@drawable/ic_action_name1"
             android:title="@string/new_menu"/>
+        <item
+            android:id="@+id/nav_new1"
+            android:icon="@drawable/ic_action_name1"
+            android:title="@string/new_menu1"/>
+        <item
+            android:id="@+id/nav_collapsing_bar"
+            android:icon="@drawable/ic_action_name1"
+            android:title="@string/new_collapsing_bar"/>
+
+        <item
+            android:id="@+id/nav_recycler_view"
+            android:icon="@drawable/ocean1"
+            android:title="@string/new_recycler_name"/>
     </group>
 
     <item android:title="Communicate">

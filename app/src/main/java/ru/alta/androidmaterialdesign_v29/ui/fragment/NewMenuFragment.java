@@ -16,12 +16,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
+import androidx.navigation.Navigation;
 
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.textfield.TextInputEditText;
 
 import ru.alta.androidmaterialdesign_v29.BottomSheetFragment;
 import ru.alta.androidmaterialdesign_v29.R;
+import ru.alta.androidmaterialdesign_v29.ui.progressbar.Fragment_progress_bar;
 
 public class NewMenuFragment extends Fragment {
 
@@ -30,14 +32,30 @@ public class NewMenuFragment extends Fragment {
 
 
     public View onCreateView(@NonNull LayoutInflater inflater,
-                             ViewGroup container, Bundle savedInstanceState) {
+                             final ViewGroup container, final Bundle savedInstanceState) {
         newMenuViewModel =
                 ViewModelProviders.of(this).get(NewMenuViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_new_menu, container, false);
+        final View root = inflater.inflate(R.layout.fragment_new_menu, container, false);
         final TextView textView = root.findViewById(R.id.text_new);
         final TextInputEditText textLoginName = root.findViewById(R.id.textInputEditText);
         Button buttonLogin = root.findViewById(R.id.buttonLogin);
         Button buttonNoActionBar = root.findViewById(R.id.buttonNoActionBar);
+        Button buttonOpen = root.findViewById(R.id.buttonOpen);
+
+
+        buttonOpen.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (savedInstanceState == null) {
+                    Fragment_progress_bar nextFrag= new Fragment_progress_bar();
+                    getActivity().getSupportFragmentManager().beginTransaction()
+                            .replace(R.id.nav_host_fragment, nextFrag, "findThisFragment")
+                            .addToBackStack(null)
+                            .commit();                }
+            }
+        });
+
+
 
         BottomSheetFragment bottomSheetDialogFragment = new BottomSheetFragment();
         bottomSheetDialogFragment.show(getActivity().getSupportFragmentManager(), "Bottom Sheet Dialog Fragment");
@@ -94,7 +112,6 @@ public class NewMenuFragment extends Fragment {
             }
         }
         );
-
 
         return root;
 
