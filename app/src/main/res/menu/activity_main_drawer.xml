@@ -38,6 +38,11 @@
             android:id="@+id/nav_recycler_view"
             android:icon="@drawable/ocean1"
             android:title="@string/new_recycler_name"/>
+
+        <item
+            android:id="@+id/nav_tab_view"
+            android:icon="@drawable/ocean2"
+            android:title="@string/new_tabs_name"/>
     </group>
 
     <item android:title="Communicate">

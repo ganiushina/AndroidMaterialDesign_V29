@@ -15,6 +15,7 @@
     <string name="menu_send">Send</string>
     <string name="new_menu">Новое меню</string>
     <string name="new_menu1">Progress Bar меню</string>
+    <string name="new_menu_tabs">Tabs View меню</string>
     <string name="new_collapsing_bar">Collapsing Bar меню</string>
     <string name="fab_behavior_name">FAB_Hide_on_Scroll</string>
     <string name="enter_name">Введите имя</string>
@@ -123,4 +124,5 @@
     <string name="buttonOpen">Open New Fragment</string>
     <string name="ocean">Океан</string>
     <string name="new_recycler_name">New Recycler View Fragment</string>
+    <string name="new_tabs_name">New Tabs View Fragment</string>
 </resources>

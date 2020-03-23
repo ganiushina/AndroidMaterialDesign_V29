@@ -54,6 +54,13 @@
         tools:layout="@layout/fragment_item_list" />
 
     <fragment
+        android:id="@+id/nav_tab_view"
+        android:name="ru.alta.androidmaterialdesign_v29.ui.tab.FragmentTab"
+        android:label="@string/new_menu_tabs"
+        tools:layout="@layout/fragment_tab" />
+
+
+    <fragment
         android:id="@+id/nav_share"
         android:name="ru.alta.androidmaterialdesign_v29.ui.share.ShareFragment"
         android:label="@string/menu_share"
