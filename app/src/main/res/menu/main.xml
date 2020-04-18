@@ -6,4 +6,23 @@
         android:orderInCategory="100"
         android:title="@string/action_settings"
         app:showAsAction="never" />
+
+    <item
+        android:id="@+id/standard"
+        android:orderInCategory="100"
+        android:icon="@drawable/ic_standard"
+        android:title="standard"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/purple"
+        android:orderInCategory="100"
+        android:icon="@drawable/ic_purple"
+        android:title="purple"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/brown"
+        android:orderInCategory="100"
+        android:icon="@drawable/ic_brown"
+        android:title="brown"
+        app:showAsAction="always" />
 </menu>

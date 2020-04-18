@@ -131,4 +131,10 @@
     <string name="new_recycler_name">New Recycler View Fragment</string>
     <string name="new_tabs_name">New Tabs View Fragment</string>
     <string name="new_bottom_view">New Bottom View Fragment</string>
+    <string name="todo">TODO</string>
+    <string name="textview1">Текст1</string>
+    <string name="textview2">Текст2</string>
+    <string name="textview3">Текст3</string>
+    <string name="textview4">Текст4</string>
+    <string name="textview5">Текст5</string>
 </resources>

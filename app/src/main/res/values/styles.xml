@@ -24,6 +24,13 @@
         <item name="android:textColor">@color/colorPrimary</item>
     </style>
 
+    <style name="MyStyle" parent="AppTheme">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">8dp</item>
+    </style>
+
+
     <style name="CounterStyle" parent="TextAppearance.AppCompat.Small">
         <item name="android:textColor">@android:color/holo_red_dark</item>
     </style>
@@ -39,6 +46,22 @@
     <style name="MyButton" parent="Widget.AppCompat.Button.Colored">
         <item name="backgroundTint">@drawable/button_background_selector</item>
         <item name="android:textColor">@drawable/button_text_selector</item>
+    </style>
+
+    <style name="AppThemePurple" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimaryPurple</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDarkPurple</item>
+        <item name="colorAccent">@color/colorAccentPurple</item>
+        <!--        <item name="windowActionBar">false</item>-->
+        <!--        <item name="windowNoTitle">true</item>-->
+    </style>
+
+    <style name="AppThemeBrown" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimaryBrown</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDarkBrown</item>
+        <item name="colorAccent">@color/colorAccentBrown</item>
+        <!--        <item name="windowActionBar">false</item>-->
+        <!--        <item name="windowNoTitle">true</item>-->
     </style>
 
 

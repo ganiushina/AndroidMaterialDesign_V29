@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StyleFragment"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textView6"
+        style="@style/MyStyle"
+        android:textColor="@android:color/holo_blue_dark"
+        android:text="@string/textview1" />
+
+    <TextView
+        android:id="@+id/textView7"
+        style="@style/MyStyle"
+        android:text="@string/textview2" />
+
+    <TextView
+        android:id="@+id/textView8"
+        style="@style/MyStyle"
+        android:textColor="@android:color/holo_purple"
+        android:text="@string/textview3" />
+
+    <TextView
+        android:id="@+id/textView9"
+        style="@style/MyStyle"
+        android:text="@string/textview4" />
+
+    <TextView
+        android:id="@+id/textView10"
+        style="@style/MyStyle"
+        android:text="@string/textview5" />
+</LinearLayout>
